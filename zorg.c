@@ -1,24 +1,22 @@
 #include <stdlib.h>
 #include <math.h>
 
-int BANK[256]={}, SORT[512]={};
-int target=2;
+int BANK[256]={};
+float target=2.00;
 
-float sum() {
+float account() {
   float a=0;
-  for (int i=0; i<SORT.length; i++) { a+=(1/i);}
+  for (int i=0; i<sizeof(BANK)/sizeof(BANK[0]); i++) { a+=(1/i);}
   return a;
 }
 
 int main() {
   for (int i=1; i<=512; i++) {
-    if (sum()<2.00) {
-      SORT[SORT.length]=BANKp[0]
-      
+    if (sum()>=target) {
+      sum-=1/BANK[0]; #downshift BANK
     }
-    else {
-      
-    }
+    sum+=1/i;
+    BANK[sizeof(BANK)/sizeof(BANK[0])]=i;
   }
   return 1;
 }
